@@ -1,0 +1,7 @@
+backend_rg_name = "salz-tfstate-rg"
+backend_storage_account_name = "<storage-account-name>"
+backend_container_name = "tfstate"
+
+rg_name = "salz-core-rg"
+log_analytics_name = "salz-law"
+location = "eastus"
