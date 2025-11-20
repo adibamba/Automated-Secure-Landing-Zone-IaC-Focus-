@@ -1,0 +1,24 @@
+{
+  "properties": {
+    "displayName": "Deny creation of public IP addresses",
+    "policyType": "BuiltIn",
+    "mode": "All",
+    "description": "Deny creation of public IP resources to prevent public exposure of network interfaces.",
+    "metadata": {
+      "category": "Network"
+    },
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Network/publicIPAddresses"
+          }
+        ]
+      },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  }
+}
